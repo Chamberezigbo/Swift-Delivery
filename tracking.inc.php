@@ -42,6 +42,8 @@ if (isset($_POST['track'])) {
                $_SESSION['arrivalDate'] = $row['arriva_date'];
                $_SESSION['arrivalD'] = $row['arriva_day'];
                $_SESSION['trackingId'] = $row['tracking_id'];
+               $_SESSION['currentLocation'] = $row['current_location'];
+               
 
                header("Location:tracking.php");
           } else {

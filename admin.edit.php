@@ -22,6 +22,7 @@ if ($result) {
           $TrackingId = $row['tracking_id'];
           $arrivalDate = $row['arriva_date'];
           $arrivalDay = $row['arriva_day'];
+          $currentLocation = $row['current_location'];
      }
 }
 
@@ -42,6 +43,7 @@ if (isset($_POST['RegisterPro'])) {
      $arrivalDay = $_POST['arrivalDay'];
      $packageWight = $_POST['packageWight'];
      $status = $_POST['stat'];
+     $currentLocation = $_POST['currentLocation'];
 
      $sql2 = "UPDATE packages
      SET senders_name = '$senderName',
@@ -57,7 +59,8 @@ if (isset($_POST['RegisterPro'])) {
       package_weight = '$packageWight',
       status = '$status',
       arriva_date = '$arrivalDate',
-      arriva_day = '$arrivalDay'
+      arriva_day = '$arrivalDay',
+      current_location = '$currentLocation'
      WHERE id = $id";
      $result = mysqli_query($conn, $sql2);
      if ($result) {
@@ -183,7 +186,11 @@ if (isset($_POST['RegisterPro'])) {
                     </div>
                     <div class="mb-3">
                          <label for="exampleFormControlTextarea1" class="form-label">Tracking Number</label>
-                         <input class="form-control" disabled type="text" value="<?= $TrackingId ?>" name="packageWight" id="exampleFormControlTextarea1" required></input>
+                         <input class="form-control" disabled type="text" value="<?= $TrackingId ?>" id="exampleFormControlTextarea1" required></input>
+                    </div>
+                    <div class="mb-3">
+                         <label for="exampleFormControlTextarea1" class="form-label">Current Location</label>
+                         <input class="form-control" type="text" value="<?= $currentLocation ?>" name="currentLocation" id="exampleFormControlTextarea1" required></input>
                     </div>
                     <div class="text-center">
                          <button class="btn btn-danger" type="submit" name="RegisterPro">Submit</button>
