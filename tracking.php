@@ -30,29 +30,31 @@ if (!$_SESSION['auth']) {
                     </nav>
                </div>
           </div>
+          <!-- map section pt-2 mb--5 -->
           <div class="">
-               <div class="mapouter pt-2 mb-5">
-                    <div class="gmap_canvas"><iframe width="1500" height="325" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br>
+               <div class="mapouter pt-2 mb-3">
+                    <div class="gmap_canvas"><iframe width="1500" height="325" id="gmap_canvas" src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br>
                          <style>
                               .mapouter {
                                    position: relative;
+                                   text-align: right;
                                    height: 325px;
-                                   width: 100%;
+                                   width: 1500px;
                               }
-                         </style><a href="https://www.embedgooglemap.net">google maps on my web site</a>
+                         </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
                          <style>
                               .gmap_canvas {
                                    overflow: hidden;
                                    background: none !important;
                                    height: 325px;
-                                   width: 100%;
+                                   width: 1500px;
                               }
                          </style>
                     </div>
                </div>
           </div>
-
-          <div class="container">
+          <!-- background color -->
+          <div class="container mt-5">
                <div class="row">
                     <div class="col-lg-9">
                          <div class="">
@@ -71,7 +73,7 @@ if (!$_SESSION['auth']) {
                          </div>
 
                          <div class="table-responsive">
-                              <table class="table table-striped table-hover caption-top">
+                              <table class="table table-dark text-warning caption-top">
                                    <caption>Tracking Details</caption>
                                    <thead>
                                         <tr>
@@ -84,7 +86,7 @@ if (!$_SESSION['auth']) {
                                         </tr>
                                    </thead>
                                    <tbody>
-                                        <tr>
+                                        <tr class="text-danger">
                                              <td scope="row">Departure Detail</td>
                                              <td><?= $_SESSION['departureLocation'] ?></td>
                                              <td><?= $_SESSION['departureCountry'] ?></td>
@@ -101,7 +103,7 @@ if (!$_SESSION['auth']) {
                                              <td></td>
                                              <td></td>
                                         </tr>
-                                        <tr>
+                                        <tr class="text-success">
                                              <td scope="row">Current Location Detail</td>
                                              <td><?= $_SESSION['currentLocation'] ?></td>
                                              <td></td>
@@ -109,7 +111,7 @@ if (!$_SESSION['auth']) {
                                              <td><?= date("Y-m-d") ?></td>
                                              <td><?= date("h:i:sa") ?></td>
                                         </tr>
-                                        <tr>
+                                        <tr class="text-danger">
                                              <td scope="row">Arrival Detail</td>
                                              <!-- add database date and time here -->
                                              <td><?= $_SESSION['arrivalLocation'] ?></td>
@@ -121,7 +123,7 @@ if (!$_SESSION['auth']) {
                                    </tbody>
                               </table>
 
-                              <table class="table mt-5 mb-5">
+                              <table class="table table-dark text-warning mt-5 mb-5">
                                    <thead>
                                         <tr>
                                              <td scope="col">Details</td>
@@ -133,7 +135,7 @@ if (!$_SESSION['auth']) {
                                         </tr>
                                    </thead>
                                    <tbody>
-                                        <tr>
+                                        <tr class="text-danger">
                                              <td scope="row">Departure Detail</td>
                                              <td><?= $_SESSION['departureLocation'] ?></td>
                                              <td><?= $_SESSION['departureCountry'] ?></td>
@@ -147,10 +149,10 @@ if (!$_SESSION['auth']) {
                          </div>
                     </div>
 
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 mb-5">
                          <div class="card border-warning">
-                              <h5 class="card-header">CONSIGNMENT DETAILS</h5>
-                              <div class="card-body">
+                              <h5 class="card-header text-dark">CONSIGNMENT DETAILS</h5>
+                              <div class="card-body bg-dark text-light">
                                    <h5 class="card-title text-center">Receiver's Details.</h5>
                                    <p class="card-text">Receiver's name: <?= $_SESSION['clientName'] ?> </p>
                                    <p class="card-text">Address: <?= $_SESSION['arrivalLocation'] ?> </p>
