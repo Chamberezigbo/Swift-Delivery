@@ -31,7 +31,7 @@ if (!$_SESSION['auth']) {
                </div>
           </div>
           <!-- map section pt-2 mb--5 -->
-          <div class="">
+          <div class="container">
                <div class="mapouter pt-2 mb-3">
                     <div class="gmap_canvas"><iframe width="1500" height="325" id="gmap_canvas" src="https://maps.google.com/maps?q=london&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/">divi discount</a><br>
                          <style>
